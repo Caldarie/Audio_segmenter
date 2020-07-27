@@ -51,3 +51,7 @@ geckodriver.log
 *.code-workspace
 .history
 .vscode
+
+# pipfile
+Pipfile.lock
+Pipfile
