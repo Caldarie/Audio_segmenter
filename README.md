@@ -12,7 +12,7 @@ Python script to splice audio files to 5 second intervals, as well as normalize 
 
 4. Run the third cell to output wave graph. 
 
-5. Using the wave graph, make sure that it matches with the time frame from the second cell. If it doesn't match, readjust the parameters again. For example:
+5. Using the wave graph, make sure that it matches with the time frame from the second cell. If it doesn't match, readjust the parameters again. Optimal parameters should match the time frames like this:
 ![Wave Graph](https://github.com/Caldarie/Audio_segmenter/blob/master/Images/Screen%20Shot%202020-07-27%20at%2011.04.38%20pm.png)
 
 If you need to just splice the audio files, and normalize amplitude, channel, and sampling rate... just run audio_segmentation on jupyter note
