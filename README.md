@@ -1,5 +1,5 @@
 # Audio Segmenter
-Python script to splice audio files to 5 second intervals, as well as normalize amplitude, channel, sampling rate; and lastly removing unnesscary silences. Used to preprocess raw audio data for machine learning
+Process raw audio data to clean segmented data for machine learning. This script splice audio files to 5 second intervals; normalize amplitudes, channel sampling rate; as well as padding for audio lengths shorter than 5 seconds.
 
 ## If you need to find the optimal parameters for removing silence in your audio:
 1. Open parameter_tester.ipynb. This script will take a sample of your original file, which can be used to test and find the optimal silence length and threshold.
