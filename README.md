@@ -21,11 +21,5 @@ What this script will do is:
 5. Using the wave graph, make sure that it matches with the time frame from the second cell. If it doesn't match, readjust the parameters again. Optimal parameters should match the time frames like this:
 ![Wave Graph](https://github.com/Caldarie/Audio_segmenter/blob/master/Images/Screen%20Shot%202020-07-27%20at%2011.04.38%20pm.png)
 
-# If you just want to splice the audio files:
-The first cell is for normalizing audio and removing silence gaps. The second cell splits all audio files into 5 second intervals
-1. Adjust the paremeters before running the cell. These are:
-  a) For silence: `mini_silence_len` and `silence_thresh`
-  b) For intended audio length, it is `target_length`
-  c) If you don't wish to adding padding. Just remove comment remove 'silence_chunk` from `padded_normalized_chunk = normalized_chunk + silence_chunk`
   
 
