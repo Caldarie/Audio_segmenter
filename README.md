@@ -1,5 +1,11 @@
 # Audio Segmenter
-Process raw audio data to clean segmented data for machine learning. This script splice audio files to 5 second intervals; normalize amplitudes, channel sampling rate; as well as padding for audio lengths shorter than 5 seconds.
+This script uses a heavily modified pydub package (0.24.1) to segment and normalize raw conversational/speeches files for machine learning. Please be aware that this script can/may be broken if any other pydub versions are used.
+
+What this script will do is:
+  1. Removes unnecessary long pauses/silences, but retaining natural silences which indicates the speakers thoughts or use of fillers.
+  2. Splits the audio files into 5 second intervals. Files that are too short will be kept but labelled as "leftover"
+  3. Normalize amplitude, chanhel, and sampling rate.
+
 
 ## If you need to find the optimal parameters for removing silence in your audio:
 1. Open parameter_tester.ipynb. This script will take a sample of your original file, which can be used to test and find the optimal silence length and threshold.
