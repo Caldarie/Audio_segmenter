@@ -1,5 +1,7 @@
 # Audio Segmenter
-This script uses a heavily modified pydub package (0.24.1) to segment and normalize raw conversational/speeches files for machine learning. Please be aware that this script can/may be broken if any other pydub versions are used.
+This script uses a heavily modified pydub package (0.24.1) to segment and normalize raw conversational/speeches files for machine learning. Compared to using the standard pydub library for this use case, performance is much faster with less cpu intensity by removing the need to use multiple loops to segment data.
+
+Please be aware that this script can/may be broken if any other pydub versions are used.
 
 What this script will do is:
   1. Removes unnecessary long pauses/silences, but retaining natural silences which indicates the speakers thoughts or use of fillers.
