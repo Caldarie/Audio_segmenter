@@ -20,7 +20,7 @@ This script is used to process audio data where there are two speakers.
 What this script will do is:
   1. Convert the files to wav
   2. After editing out the interviewer with audacity, normalize the audio
-  3. Splice the spliced files into 5 second interval.
+  3. Splice the spliced files into 5 second interval, and retains files that are under 5 seconds.
 
 ## create_dataframe.ipynb
 
