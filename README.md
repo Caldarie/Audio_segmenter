@@ -5,7 +5,7 @@ Please be aware that this script can/may be broken if any other pydub versions a
 
 ## audio_segmentation.ipynb
 
-This script assumes that there is only one speaker.
+This script assumes that there is only one speaker. If you need to find the optimal silence threshold and length, please use 'parameter_tester.ipynb' to find the optimal values.
 
 What this script will do is:
   1. Removes unnecessary long pauses/silences, but retaining natural silences which indicates the speakers thoughts or use of fillers.
