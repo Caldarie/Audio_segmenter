@@ -1,5 +1,5 @@
 # Audio Segmentation
-The scripts uses a heavily modified pydub package (0.24.1) to segment and normalize raw conversational/speeches files for machine learning. Compared to using the standard pydub library, this script is optimized for processing audio by removing the need to use multiple loops to segment data.
+The scripts uses a modified pydub package (0.24.1) to segment and normalize raw conversational/speeches files for machine learning. Compared to using the standard pydub library, this script is optimized for processing audio by removing the need to use multiple loops to segment data.
 
 Please be aware that this script can/may be broken if any other pydub versions are used.
 
