@@ -1,5 +1,7 @@
-# Audio Segmenter
+# Audio Segmentation
 This script uses a heavily modified pydub package (0.24.1) to segment and normalize raw conversational/speeches files for machine learning. Compared to using the standard pydub library for this use case, performance is much faster with less cpu intensity by removing the need to use multiple loops to segment data.
+
+This script assumes that there is only one speaker.
 
 Please be aware that this script can/may be broken if any other pydub versions are used.
 
@@ -7,7 +9,16 @@ What this script will do is:
   1. Removes unnecessary long pauses/silences, but retaining natural silences which indicates the speakers thoughts or use of fillers.
   2. Splits the audio files into 5 second intervals. Files that are too short will be kept but labelled as "leftover"
   3. Normalize amplitude, chanhel, and sampling rate.
+  4. [Future Feature] Removes background noise if applicable
 
+# Converter
+
+This script is used to process audio data where there are two speakers. Convert the files to wav, then edit out the interviewer via pydub, normalize the audio and finally splice the spliced files into 5 second interval.
+
+
+# Create dataframe 
+
+Iterates wav files and creates a metadata.
 
 ## If you need to find the optimal parameters for removing silence in your audio:
 1. Open parameter_tester.ipynb. This script will take a sample of your original file, which can be used to test and find the optimal silence length and threshold.
