@@ -12,6 +12,7 @@ What this script will do is:
   2. Splits the audio files into 5 second intervals. Files that are too short will be kept but labelled as "leftover"
   3. Normalize amplitude, chanhel, and sampling rate.
   4. [Future Feature] Removes background noise if applicable
+  5. [Future Feature] Generates a unique adds id for each file
 
 ## convert.ipynb
 
@@ -20,7 +21,9 @@ This script is used to process audio data where there are two speakers.
 What this script will do is:
   1. Convert the files to wav
   2. After editing out the interviewer with audacity, normalize the audio
-  3. Splice the spliced files into 5 second interval, and retains files that are under 5 seconds.
+  3. Splice the spliced files into 5 second interval
+  4. Retains files that are under 5 seconds and appends as leftover
+  5. [Future Feature] Generates a unique adds id for each file
 
 ## create_dataframe.ipynb
 
@@ -28,10 +31,12 @@ Iterates wav files and creates a metadata.
 
 What this will do:
   1. Records the name of the file
-  2. [Future Feature] Generates an adds an id for each file
-  3. [Future Feature] Records the length of silence
-  4. [Future Feature] Records the name of the folder
-  5. [Future Feature] Records the length of the audio
+  2. Records the sub folder location 
+  3. Records the audio data in a float 32 numpy array (used for tensor input)
+  4. Records the sample rate as a int32 numpy array (used for tensor input)
+  5. Records length of audio file 
+  6. Records the bit depth of audio file
+  
 
 ## parameter_tester.ipynb
 
