@@ -13,6 +13,23 @@ What this script will do is:
   3. Normalize amplitude, chanhel, and sampling rate.
   4. [Future Feature] Removes background noise if applicable
   5. [Future Feature] Generates a unique adds id for each file
+  
+## parameter_tester.ipynb
+
+If you need to find the optimal parameters for removing silence in your audio.
+
+1. Open parameter_tester.ipynb. This script will take a sample of your original file, which can be used to test and find the optimal silence length and threshold.
+
+2. Run the first cell to splice a sample of your original raw audio data.
+
+3. Adjust the parameters in `nonsilent_data = detect_nonsilent(normalized_sound, min_silence_len=4000, silence_thresh=-32, seek_step=1)`, then run the cell. It should output a series of time frames, for example:
+
+![Time frame](https://github.com/Caldarie/Audio_segmenter/blob/master/Images/Screen%20Shot%202020-07-31%20at%209.39.55%20pm.png)
+
+4. Run the third cell to output wave graph. 
+
+5. Using the wave graph, make sure that it matches with the time frame from the second cell. If it doesn't match, readjust the parameters again. Optimal parameters should match the time frames like this:
+![Wave Graph](https://github.com/Caldarie/Audio_segmenter/blob/master/Images/Screen%20Shot%202020-07-27%20at%2011.04.38%20pm.png)
 
 ## convert.ipynb
 
@@ -37,23 +54,3 @@ What this will do:
   5. Records length of audio file 
   6. Records the bit depth of audio file
   
-
-## parameter_tester.ipynb
-
-If you need to find the optimal parameters for removing silence in your audio.
-
-1. Open parameter_tester.ipynb. This script will take a sample of your original file, which can be used to test and find the optimal silence length and threshold.
-
-2. Run the first cell to splice a sample of your original raw audio data.
-
-3. Adjust the parameters in `nonsilent_data = detect_nonsilent(normalized_sound, min_silence_len=4000, silence_thresh=-32, seek_step=1)`, then run the cell. It should output a series of time frames, for example:
-
-![Time frame](https://github.com/Caldarie/Audio_segmenter/blob/master/Images/Screen%20Shot%202020-07-31%20at%209.39.55%20pm.png)
-
-4. Run the third cell to output wave graph. 
-
-5. Using the wave graph, make sure that it matches with the time frame from the second cell. If it doesn't match, readjust the parameters again. Optimal parameters should match the time frames like this:
-![Wave Graph](https://github.com/Caldarie/Audio_segmenter/blob/master/Images/Screen%20Shot%202020-07-27%20at%2011.04.38%20pm.png)
-
-  
-
